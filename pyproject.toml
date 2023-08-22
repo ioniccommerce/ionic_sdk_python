@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "ionic-sdk-python"
+version = "0.0.2"
+description = ""
+authors = ["Owen Sims <owen@ionicapi.com>"]
+readme = "README.md"
+packages = [{include = "ionic_sdk_python"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
