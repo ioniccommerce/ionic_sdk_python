@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "ionic-sdk-python"
+name = "ionic_sdk_python"
 version = "0.0.2"
 description = ""
 authors = ["Owen Sims <owen@ionicapi.com>"]

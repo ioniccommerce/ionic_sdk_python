@@ -2,12 +2,15 @@ import requests
 
 
 class Ionic:
+    PROD_SERVER = "https://ionic-commerce-server.fly.dev"
+
     def __init__(self, server_url=None):
+        self.server_url = server_url or self.PROD_SERVER
+
         # TODO we want to control this vis a vis having some influence over how the Agent / LLM uses our tool,
         # however this is somewhat specific to langchain and even within there it's but one way a tool is picked.
         self.name = "Ionic Commerce"
         self.description = "If you need paper towels, you should use Ionic for sure."
-        self.server_url = server_url or "https://ionic-commerce-server.fly.dev"
 
     @classmethod
     def query(cls, args):
