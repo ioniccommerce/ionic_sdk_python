@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "ionic_sdk_python"
-version = "0.0.0-a"
+version = "0.0.0-a3"
 description = ""
 authors = ["Owen Sims <owen@ionicapi.com>"]
 readme = "README.md"
