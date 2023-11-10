@@ -1,18 +1,38 @@
 configVersion: 1.0.0
+management:
+  docChecksum: 13ee01760b8b59cd068ca22706bb4810
+  docVersion: "0.1"
+  speakeasyVersion: 1.119.0
+  generationVersion: 2.188.1
 generation:
-  comments:
-    disableComments: false
-    omitDescriptionIfSummaryPresent: false
+  comments: {}
+  sdkClassName: Ionic-API
+  repoURL: https://github.com/ioniccommerce/ionic_sdk_python.git
+  usageSnippets:
+    optionalPropertyRendering: withExample
   baseServerURL: ""
   flattenGlobalSecurity: true
-  sdkClassName: Ionic-API
-  singleTagPerOp: false
-  tagNamespacingDisabled: false
+features:
+  python:
+    core: 4.1.2
+    globalServerURLs: 2.82.0
 python:
-  version: 0.0.1
+  version: 0.1.0
   author: Ionic
   clientServerStatusCodesAsErrors: true
   description: Python Client SDK
   flattenGlobalSecurity: true
+  imports:
+    option: openapi
+    paths:
+      callbacks: models/callbacks
+      errors: models/errors
+      operations: models/operations
+      shared: models/components
+      webhooks: models/webhooks
+  inputModelSuffix: input
+  installationURL: https://github.com/ioniccommerce/ionic_sdk_python.git
   maxMethodParams: 4
+  outputModelSuffix: output
   packageName: Ionic-SDK-Python
+  repoSubDirectory: .
