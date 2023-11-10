@@ -27,10 +27,10 @@ pip install git+https://github.com/ioniccommerce/ionic_sdk_python.git
 ### Example
 
 ```python
-import ionic_api
-from ionic_api.models import components
+import ionic
+from ionic.models import components
 
-s = ionic_api.IonicAPI()
+s = ionic.Ionic()
 
 req = components.QueryAPIRequest(
     queries=[
@@ -51,9 +51,9 @@ if res.query_api_response is not None:
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### [IonicAPI SDK](docs/sdks/ionicapi/README.md)
+### [Ionic SDK](docs/sdks/ionic/README.md)
 
-* [query](docs/sdks/ionicapi/README.md#query) - Multi-Query Product Search.
+* [query](docs/sdks/ionic/README.md#query) - Multi-Query Product Search.
 <!-- End SDK Available Operations -->
 
 <!-- Start Error Handling -->
@@ -69,10 +69,10 @@ Handling errors in this SDK should largely match your expectations.  All operati
 ### Example
 
 ```python
-import ionic_api
-from ionic_api.models import components
+import ionic
+from ionic.models import components
 
-s = ionic_api.IonicAPI()
+s = ionic.Ionic()
 
 req = components.QueryAPIRequest(
     queries=[
@@ -96,7 +96,6 @@ if res.query_api_response is not None:
     # handle response
     pass
 ```
-
 <!-- End Error Handling -->
 
 <!-- Start Server Selection -->
@@ -113,10 +112,10 @@ You can override the default server globally by passing a server index to the `s
 #### Example
 
 ```python
-import ionic_api
-from ionic_api.models import components
+import ionic
+from ionic.models import components
 
-s = ionic_api.IonicAPI(
+s = ionic.Ionic(
     server_idx=0,
 )
 
@@ -140,10 +139,10 @@ if res.query_api_response is not None:
 
 The default server can also be overridden globally by passing a URL to the `server_url: str` optional parameter when initializing the SDK client instance. For example:
 ```python
-import ionic_api
-from ionic_api.models import components
+import ionic
+from ionic.models import components
 
-s = ionic_api.IonicAPI(
+s = ionic.Ionic(
     server_url="https://api.ionicapi.com",
 )
 
@@ -170,12 +169,12 @@ The Python SDK makes API calls using the (requests)[https://pypi.org/project/req
 
 For example, you could specify a header for every request that this sdk makes as follows:
 ```python
-import ionic_api
+import ionic
 import requests
 
 http_client = requests.Session()
 http_client.headers.update({'x-custom-header': 'someValue'})
-s = ionic_api.IonicAPI(client: http_client)
+s = ionic.Ionic(client: http_client)
 ```
 <!-- End Custom HTTP Client -->
 

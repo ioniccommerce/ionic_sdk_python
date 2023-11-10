@@ -2,11 +2,11 @@
 
 import requests as requests_http
 from .sdkconfiguration import SDKConfiguration
-from ionic_api import utils
-from ionic_api.models import components, errors, operations
+from ionic import utils
+from ionic.models import components, errors, operations
 from typing import Dict, Optional
 
-class IonicAPI:
+class Ionic:
     r"""Ionic Shopping API: Product Search & Recommendation API"""
 
     sdk_configuration: SDKConfiguration

@@ -1,4 +1,4 @@
-# IonicAPI SDK
+# Ionic SDK
 
 
 ## Overview
@@ -16,10 +16,10 @@ API for searching for products & recommendations. Accepts multiple query objects
 ### Example Usage
 
 ```python
-import ionic_api
-from ionic_api.models import components
+import ionic
+from ionic.models import components
 
-s = ionic_api.IonicAPI()
+s = ionic.Ionic()
 
 req = components.QueryAPIRequest(
     queries=[

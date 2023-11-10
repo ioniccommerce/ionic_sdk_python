@@ -4,7 +4,7 @@ from __future__ import annotations
 import dataclasses
 from .query import Query
 from dataclasses_json import Undefined, dataclass_json
-from ionic_api import utils
+from ionic import utils
 from typing import List, Optional
 
 
