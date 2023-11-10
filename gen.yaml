@@ -5,13 +5,17 @@ management:
   speakeasyVersion: 1.119.0
   generationVersion: 2.188.1
 generation:
-  comments: {}
-  sdkClassName: Ionic
-  repoURL: https://github.com/ioniccommerce/ionic_sdk_python.git
-  usageSnippets:
-    optionalPropertyRendering: withExample
+  comments:
+    disableComments: false
+    omitDescriptionIfSummaryPresent: false
   baseServerURL: ""
   flattenGlobalSecurity: true
+  repoURL: https://github.com/ioniccommerce/ionic_sdk_python.git
+  sdkClassName: Ionic
+  singleTagPerOp: false
+  tagNamespacingDisabled: false
+  usageSnippets:
+    optionalPropertyRendering: withExample
 features:
   python:
     core: 4.1.2
