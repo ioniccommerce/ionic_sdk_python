@@ -6,7 +6,7 @@ management:
   generationVersion: 2.188.1
 generation:
   comments: {}
-  sdkClassName: Ionic-API
+  sdkClassName: Ionic
   repoURL: https://github.com/ioniccommerce/ionic_sdk_python.git
   usageSnippets:
     optionalPropertyRendering: withExample
