@@ -38,5 +38,5 @@ python:
   installationURL: https://github.com/ioniccommerce/ionic_sdk_python.git
   maxMethodParams: 4
   outputModelSuffix: output
-  packageName: Ionic-SDK-Python
+  packageName: Ionic-API-SDK
   repoSubDirectory: .
