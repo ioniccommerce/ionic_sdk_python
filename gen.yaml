@@ -5,23 +5,19 @@ management:
   speakeasyVersion: 1.119.0
   generationVersion: 2.188.1
 generation:
-  comments:
-    disableComments: false
-    omitDescriptionIfSummaryPresent: false
-  baseServerURL: ""
-  flattenGlobalSecurity: true
-  repoURL: https://github.com/ioniccommerce/ionic_sdk_python.git
+  comments: {}
   sdkClassName: Ionic
-  singleTagPerOp: false
-  tagNamespacingDisabled: false
+  repoURL: https://github.com/ioniccommerce/ionic_sdk_python.git
   usageSnippets:
     optionalPropertyRendering: withExample
+  baseServerURL: ""
+  flattenGlobalSecurity: true
 features:
   python:
     core: 4.1.2
     globalServerURLs: 2.82.0
 python:
-  version: 0.2.0
+  version: 0.3.0
   author: Ionic
   clientServerStatusCodesAsErrors: true
   description: Python Client SDK
@@ -39,4 +35,5 @@ python:
   maxMethodParams: 4
   outputModelSuffix: output
   packageName: Ionic-API-SDK
+  published: true
   repoSubDirectory: .

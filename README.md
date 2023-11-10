@@ -18,7 +18,7 @@ It has been generated successfully based on your OpenAPI spec. However, it is no
 ## SDK Installation
 
 ```bash
-pip install git+https://github.com/ioniccommerce/ionic_sdk_python.git
+pip install Ionic-API-SDK
 ```
 <!-- End SDK Installation -->
 

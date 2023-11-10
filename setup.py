@@ -9,8 +9,8 @@ except FileNotFoundError:
     long_description = ""
 
 setuptools.setup(
-    name="Ionic-SDK-Python",
-    version="0.2.0",
+    name="Ionic-API-SDK",
+    version="0.3.0",
     author="Ionic",
     description="Python Client SDK",
     long_description=long_description,
