@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 import dataclasses
-from .validationerror import ValidationError
+from ...models.components import validationerror as components_validationerror
 from dataclasses_json import Undefined, dataclass_json
 from ionic import utils
 from typing import List, Optional
@@ -12,7 +12,7 @@ from typing import List, Optional
 
 @dataclasses.dataclass
 class HTTPValidationError(Exception):
-    detail: Optional[List[ValidationError]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('detail'), 'exclude': lambda f: f is None }})
+    detail: Optional[List[components_validationerror.ValidationError]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('detail'), 'exclude': lambda f: f is None }})
     
 
     def __str__(self) -> str:

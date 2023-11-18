@@ -6,5 +6,6 @@ from .query import *
 from .queryapirequest import *
 from .queryapiresponse import *
 from .queryresult import *
+from .validationerror import *
 
-__all__ = ["Link","Product","Query","QueryAPIRequest","QueryAPIResponse","QueryResult"]
+__all__ = ["Link","Product","Query","QueryAPIRequest","QueryAPIResponse","QueryResult","ValidationError"]
