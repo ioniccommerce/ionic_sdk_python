@@ -53,3 +53,13 @@ Based on:
 - Speakeasy CLI 1.121.2 (2.194.3) https://github.com/speakeasy-api/speakeasy
 ### Generated
 - [python v0.3.3] .
+
+## 2023-11-21 23:35:30
+### Changes
+Based on:
+- OpenAPI Doc 1.0.0 
+- Speakeasy CLI 1.121.3 (2.195.2) https://github.com/speakeasy-api/speakeasy
+### Generated
+- [python v0.4.0] .
+### Releases
+- [PyPI v0.4.0] https://pypi.org/project/Ionic-API-SDK/0.4.0 - .

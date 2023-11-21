@@ -2,15 +2,14 @@
 
 from __future__ import annotations
 import dataclasses
-from .query import Query
 from dataclasses_json import Undefined, dataclass_json
 from ionic import utils
-from typing import List, Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
-class QueryAPIRequest:
-    queries: Optional[List[Query]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('queries'), 'exclude': lambda f: f is None }})
+class Error:
+    code: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('code') }})
+    message: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('message') }})
     
 

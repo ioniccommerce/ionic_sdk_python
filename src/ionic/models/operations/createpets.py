@@ -3,19 +3,19 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ...models.components import queryapiresponse as components_queryapiresponse
+from ...models.components import error as components_error
 from typing import Optional
 
 
 @dataclasses.dataclass
-class QueryResponse:
+class CreatePetsResponse:
     content_type: str = dataclasses.field()
     r"""HTTP response content type for this operation"""
     raw_response: requests_http.Response = dataclasses.field()
     r"""Raw HTTP response; suitable for custom response parsing"""
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
-    query_api_response: Optional[components_queryapiresponse.QueryAPIResponse] = dataclasses.field(default=None)
-    r"""Successful Response"""
+    error: Optional[components_error.Error] = dataclasses.field(default=None)
+    r"""unexpected error"""
     
 

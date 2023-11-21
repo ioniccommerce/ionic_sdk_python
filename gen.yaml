@@ -1,9 +1,9 @@
 configVersion: 1.0.0
 management:
-  docChecksum: 13ee01760b8b59cd068ca22706bb4810
-  docVersion: "0.1"
-  speakeasyVersion: 1.121.2
-  generationVersion: 2.194.3
+  docChecksum: 2516596125ef223fbbef6c434d22eaac
+  docVersion: 1.0.0
+  speakeasyVersion: 1.121.3
+  generationVersion: 2.195.2
 generation:
   comments: {}
   sdkClassName: Ionic
@@ -15,9 +15,10 @@ generation:
 features:
   python:
     core: 4.1.5
+    flattening: 2.81.1
     globalServerURLs: 2.82.1
 python:
-  version: 0.3.3
+  version: 0.4.0
   author: Ionic
   clientServerStatusCodesAsErrors: true
   description: Python Client SDK
