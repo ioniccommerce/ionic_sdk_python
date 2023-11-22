@@ -20,13 +20,23 @@ pip install Ionic-API-SDK
 
 ```python
 import ionic
+from ionic.models import components, operations
 
 s = ionic.Ionic()
 
+req = components.QueryAPIRequest(
+    queries=[
+        components.Query(
+            query='string',
+        ),
+    ],
+)
 
-res = s.pets.create_pets()
+res = s.query(req, operations.QuerySecurity(
+    api_key_header="",
+))
 
-if res.status_code == 200:
+if res.query_api_response is not None:
     # handle response
     pass
 ```
@@ -35,12 +45,9 @@ if res.status_code == 200:
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
+### [Ionic SDK](docs/sdks/ionic/README.md)
 
-### [pets](docs/sdks/pets/README.md)
-
-* [create_pets](docs/sdks/pets/README.md#create_pets) - Create a pet
-* [list_pets](docs/sdks/pets/README.md#list_pets) - List all pets
-* [show_pet_by_id](docs/sdks/pets/README.md#show_pet_by_id) - Info for a specific pet
+* [query](docs/sdks/ionic/README.md#query) - Multi-Query Product Search.
 <!-- End SDK Available Operations -->
 
 <!-- Start Error Handling -->
@@ -48,27 +55,40 @@ if res.status_code == 200:
 
 Handling errors in this SDK should largely match your expectations.  All operations return a response object or raise an error.  If Error objects are specified in your OpenAPI Spec, the SDK will raise the appropriate Error type.
 
-| Error Object    | Status Code     | Content Type    |
-| --------------- | --------------- | --------------- |
-| errors.SDKError | 400-600         | */*             |
+| Error Object               | Status Code                | Content Type               |
+| -------------------------- | -------------------------- | -------------------------- |
+| errors.HTTPValidationError | 422                        | application/json           |
+| errors.SDKError            | 400-600                    | */*                        |
 
 ### Example
 
 ```python
 import ionic
+from ionic.models import components, operations
 
 s = ionic.Ionic()
 
+req = components.QueryAPIRequest(
+    queries=[
+        components.Query(
+            query='string',
+        ),
+    ],
+)
 
 res = None
 try:
-    res = s.pets.create_pets()
+    res = s.query(req, operations.QuerySecurity(
+    api_key_header="",
+))
+except (errors.HTTPValidationError) as e:
+    print(e) # handle exception
 
 except (errors.SDKError) as e:
     print(e) # handle exception
 
 
-if res.status_code == 200:
+if res.query_api_response is not None:
     # handle response
     pass
 ```
@@ -83,21 +103,31 @@ You can override the default server globally by passing a server index to the `s
 
 | # | Server | Variables |
 | - | ------ | --------- |
-| 0 | `http://petstore.swagger.io/v1` | None |
+| 0 | `https://api.ionicapi.com` | None |
 
 #### Example
 
 ```python
 import ionic
+from ionic.models import components, operations
 
 s = ionic.Ionic(
     server_idx=0,
 )
 
+req = components.QueryAPIRequest(
+    queries=[
+        components.Query(
+            query='string',
+        ),
+    ],
+)
 
-res = s.pets.create_pets()
+res = s.query(req, operations.QuerySecurity(
+    api_key_header="",
+))
 
-if res.status_code == 200:
+if res.query_api_response is not None:
     # handle response
     pass
 ```
@@ -108,15 +138,25 @@ if res.status_code == 200:
 The default server can also be overridden globally by passing a URL to the `server_url: str` optional parameter when initializing the SDK client instance. For example:
 ```python
 import ionic
+from ionic.models import components, operations
 
 s = ionic.Ionic(
-    server_url="http://petstore.swagger.io/v1",
+    server_url="https://api.ionicapi.com",
 )
 
+req = components.QueryAPIRequest(
+    queries=[
+        components.Query(
+            query='string',
+        ),
+    ],
+)
 
-res = s.pets.create_pets()
+res = s.query(req, operations.QuerySecurity(
+    api_key_header="",
+))
 
-if res.status_code == 200:
+if res.query_api_response is not None:
     # handle response
     pass
 ```
@@ -137,6 +177,71 @@ http_client.headers.update({'x-custom-header': 'someValue'})
 s = ionic.Ionic(client: http_client)
 ```
 <!-- End Custom HTTP Client -->
+
+
+
+<!-- Start Authentication -->
+
+## Authentication
+
+### Per-Client Security Schemes
+
+This SDK supports the following security scheme globally:
+
+| Name             | Type             | Scheme           |
+| ---------------- | ---------------- | ---------------- |
+| `api_key_header` | apiKey           | API key          |
+
+To authenticate with the API the `api_key_header` parameter must be set when initializing the SDK client instance. For example:
+```python
+import ionic
+from ionic.models import components, operations
+
+s = ionic.Ionic()
+
+req = components.QueryAPIRequest(
+    queries=[
+        components.Query(
+            query='string',
+        ),
+    ],
+)
+
+res = s.query(req, operations.QuerySecurity(
+    api_key_header="",
+))
+
+if res.query_api_response is not None:
+    # handle response
+    pass
+```
+
+### Per-Operation Security Schemes
+
+Some operations in this SDK require the security scheme to be specified at the request level. For example:
+```python
+import ionic
+from ionic.models import components, operations
+
+s = ionic.Ionic()
+
+req = components.QueryAPIRequest(
+    queries=[
+        components.Query(
+            query='string',
+        ),
+    ],
+)
+
+res = s.query(req, operations.QuerySecurity(
+    api_key_header="",
+))
+
+if res.query_api_response is not None:
+    # handle response
+    pass
+```
+<!-- End Authentication -->
 
 <!-- Placeholder for Future Speakeasy SDK Sections -->
 

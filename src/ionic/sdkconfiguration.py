@@ -2,26 +2,28 @@
 
 import requests
 from dataclasses import dataclass
-from typing import Dict, Tuple
+from typing import Dict, Tuple, Callable, Union
 from .utils.retries import RetryConfig
 from .utils import utils
+from ionic.models import components
 
 
 SERVERS = [
-    'http://petstore.swagger.io/v1',
+    'https://api.ionicapi.com',
 ]
 """Contains the list of servers available to the SDK"""
 
 @dataclass
 class SDKConfiguration:
     client: requests.Session
+    security: Union[components.Security,Callable[[], components.Security]] = None
     server_url: str = ''
     server_idx: int = 0
     language: str = 'python'
-    openapi_doc_version: str = '1.0.0'
-    sdk_version: str = '0.4.0'
+    openapi_doc_version: str = '0.1'
+    sdk_version: str = '0.4.1'
     gen_version: str = '2.195.2'
-    user_agent: str = 'speakeasy-sdk/python 0.4.0 2.195.2 1.0.0 Ionic-API-SDK'
+    user_agent: str = 'speakeasy-sdk/python 0.4.1 2.195.2 0.1 Ionic-API-SDK'
     retry_config: RetryConfig = None
 
     def get_server_details(self) -> Tuple[str, Dict[str, str]]:

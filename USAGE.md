@@ -1,13 +1,23 @@
 <!-- Start SDK Example Usage -->
 ```python
 import ionic
+from ionic.models import components, operations
 
 s = ionic.Ionic()
 
+req = components.QueryAPIRequest(
+    queries=[
+        components.Query(
+            query='string',
+        ),
+    ],
+)
 
-res = s.pets.create_pets()
+res = s.query(req, operations.QuerySecurity(
+    api_key_header="",
+))
 
-if res.status_code == 200:
+if res.query_api_response is not None:
     # handle response
     pass
 ```
