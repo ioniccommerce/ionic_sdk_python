@@ -12,6 +12,7 @@ from typing import List, Optional
 @dataclasses.dataclass
 class Product:
     links: List[Link] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('links') }})
+    merchant_name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('merchant_name') }})
     merchant_product_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('merchant_product_id') }})
     name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('name') }})
     price: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('price') }})

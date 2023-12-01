@@ -22,7 +22,6 @@ src/ionic/models/__init__.py
 src/ionic/models/errors/__init__.py
 src/ionic/models/operations/__init__.py
 src/ionic/models/components/__init__.py
-USAGE.md
 docs/models/operations/querysecurity.md
 docs/models/operations/queryresponse.md
 docs/models/components/queryapiresponse.md
@@ -36,4 +35,5 @@ docs/models/components/queryapirequest.md
 docs/models/components/security.md
 docs/models/errors/httpvalidationerror.md
 docs/sdks/ionic/README.md
+USAGE.md
 .gitattributes

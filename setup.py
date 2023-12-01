@@ -10,7 +10,7 @@ except FileNotFoundError:
 
 setuptools.setup(
     name="Ionic-API-SDK",
-    version="0.4.1",
+    version="0.4.2",
     author="Ionic",
     description="Python Client SDK",
     long_description=long_description,
