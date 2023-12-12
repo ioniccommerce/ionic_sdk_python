@@ -34,7 +34,7 @@ req = components.QueryAPIRequest(
 )
 
 res = s.query(req, operations.QuerySecurity(
-    api_key_header="",
+    api_key_header="<YOUR_API_KEY_HERE>",
 ))
 
 if res.query_api_response is not None:
@@ -80,7 +80,7 @@ req = components.QueryAPIRequest(
 res = None
 try:
     res = s.query(req, operations.QuerySecurity(
-    api_key_header="",
+    api_key_header="<YOUR_API_KEY_HERE>",
 ))
 except errors.HTTPValidationError as e:
     print(e)  # handle exception
@@ -125,7 +125,7 @@ req = components.QueryAPIRequest(
 )
 
 res = s.query(req, operations.QuerySecurity(
-    api_key_header="",
+    api_key_header="<YOUR_API_KEY_HERE>",
 ))
 
 if res.query_api_response is not None:
@@ -154,7 +154,7 @@ req = components.QueryAPIRequest(
 )
 
 res = s.query(req, operations.QuerySecurity(
-    api_key_header="",
+    api_key_header="<YOUR_API_KEY_HERE>",
 ))
 
 if res.query_api_response is not None:
@@ -188,11 +188,11 @@ s = ionic.Ionic(client: http_client)
 
 This SDK supports the following security scheme globally:
 
-| Name             | Type             | Scheme           |
-| ---------------- | ---------------- | ---------------- |
-| `api_key_header` | apiKey           | API key          |
+| Name            | Type            | Scheme          |
+| --------------- | --------------- | --------------- |
+| `api_key_query` | apiKey          | API key         |
 
-To authenticate with the API the `api_key_header` parameter must be set when initializing the SDK client instance. For example:
+To authenticate with the API the `api_key_query` parameter must be set when initializing the SDK client instance. For example:
 
 
 ### Per-Operation Security Schemes
@@ -213,7 +213,7 @@ req = components.QueryAPIRequest(
 )
 
 res = s.query(req, operations.QuerySecurity(
-    api_key_header="",
+    api_key_header="<YOUR_API_KEY_HERE>",
 ))
 
 if res.query_api_response is not None:

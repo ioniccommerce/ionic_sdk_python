@@ -4,7 +4,7 @@ import requests as requests_http
 from .sdkconfiguration import SDKConfiguration
 from ionic import utils
 from ionic.models import components, errors, operations
-from typing import Callable, Dict, Optional, Union
+from typing import Dict, Optional
 
 class Ionic:
     r"""Ionic Shopping API: Product Search & Recommendation API"""
@@ -12,7 +12,7 @@ class Ionic:
     sdk_configuration: SDKConfiguration
 
     def __init__(self,
-                 api_key_header: Union[str,Callable[[], str]],
+                 api_key_query: Optional[str]  = None,
                  server_idx: int = None,
                  server_url: str = None,
                  url_params: Dict[str, str] = None,
@@ -21,8 +21,8 @@ class Ionic:
                  ) -> None:
         """Instantiates the SDK configuring it with the provided parameters.
         
-        :param api_key_header: The api_key_header required for authentication
-        :type api_key_header: Union[str,Callable[[], str]]
+        :param api_key_query: The api_key_query required for authentication
+        :type api_key_query: Union[str,Callable[[], str]]
         :param server_idx: The index of the server to use for all operations
         :type server_idx: int
         :param server_url: The server URL to use for all operations
@@ -37,7 +37,7 @@ class Ionic:
         if client is None:
             client = requests_http.Session()
         
-        security = components.Security(api_key_header = api_key_header)
+        security = components.Security(api_key_query = api_key_query)
         
         if server_url is not None:
             if url_params is not None:
@@ -58,7 +58,7 @@ class Ionic:
         
         url = base_url + '/query'
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "request", False, False, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, components.QueryAPIRequest, "request", False, False, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:

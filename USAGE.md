@@ -14,7 +14,7 @@ req = components.QueryAPIRequest(
 )
 
 res = s.query(req, operations.QuerySecurity(
-    api_key_header="",
+    api_key_header="<YOUR_API_KEY_HERE>",
 ))
 
 if res.query_api_response is not None:
