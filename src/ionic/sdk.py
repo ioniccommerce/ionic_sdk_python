@@ -12,7 +12,7 @@ class Ionic:
     sdk_configuration: SDKConfiguration
 
     def __init__(self,
-                 api_key_query: Optional[str]  = None,
+                 api_key_header: Optional[str]  = None,
                  server_idx: int = None,
                  server_url: str = None,
                  url_params: Dict[str, str] = None,
@@ -21,8 +21,8 @@ class Ionic:
                  ) -> None:
         """Instantiates the SDK configuring it with the provided parameters.
         
-        :param api_key_query: The api_key_query required for authentication
-        :type api_key_query: Union[str,Callable[[], str]]
+        :param api_key_header: The api_key_header required for authentication
+        :type api_key_header: Union[str,Callable[[], str]]
         :param server_idx: The index of the server to use for all operations
         :type server_idx: int
         :param server_url: The server URL to use for all operations
@@ -37,7 +37,7 @@ class Ionic:
         if client is None:
             client = requests_http.Session()
         
-        security = components.Security(api_key_query = api_key_query)
+        security = components.Security(api_key_header = api_key_header)
         
         if server_url is not None:
             if url_params is not None:

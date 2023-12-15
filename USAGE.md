@@ -6,11 +6,23 @@ from ionic.models import components, operations
 s = ionic.Ionic()
 
 req = components.QueryAPIRequest(
+    messages=[
+        components.Message(
+            content='string',
+            role=components.MessageRole.SYSTEM,
+            type=components.MessageType.TAG,
+        ),
+    ],
     queries=[
         components.Query(
             query='string',
         ),
     ],
+    session=components.Session(
+        locale='zu_ZA',
+        session_id='string',
+        user_id='string',
+    ),
 )
 
 res = s.query(req, operations.QuerySecurity(

@@ -16,6 +16,10 @@ src/ionic/models/components/product.py
 src/ionic/models/components/link.py
 src/ionic/models/components/validationerror.py
 src/ionic/models/components/queryapirequest.py
+src/ionic/models/components/session.py
+src/ionic/models/components/message.py
+src/ionic/models/components/messagetype.py
+src/ionic/models/components/messagerole.py
 src/ionic/models/components/security.py
 src/ionic/models/errors/httpvalidationerror.py
 src/ionic/models/__init__.py
@@ -32,6 +36,10 @@ docs/models/components/link.md
 docs/models/components/loc.md
 docs/models/components/validationerror.md
 docs/models/components/queryapirequest.md
+docs/models/components/session.md
+docs/models/components/message.md
+docs/models/components/messagetype.md
+docs/models/components/messagerole.md
 docs/models/components/security.md
 docs/models/errors/httpvalidationerror.md
 docs/sdks/ionic/README.md

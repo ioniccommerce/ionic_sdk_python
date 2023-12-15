@@ -26,11 +26,23 @@ from ionic.models import components, operations
 s = ionic.Ionic()
 
 req = components.QueryAPIRequest(
+    messages=[
+        components.Message(
+            content='string',
+            role=components.MessageRole.SYSTEM,
+            type=components.MessageType.TAG,
+        ),
+    ],
     queries=[
         components.Query(
             query='string',
         ),
     ],
+    session=components.Session(
+        locale='zu_ZA',
+        session_id='string',
+        user_id='string',
+    ),
 )
 
 res = s.query(req, operations.QuerySecurity(
@@ -70,11 +82,23 @@ from ionic.models import components, operations
 s = ionic.Ionic()
 
 req = components.QueryAPIRequest(
+    messages=[
+        components.Message(
+            content='string',
+            role=components.MessageRole.SYSTEM,
+            type=components.MessageType.TAG,
+        ),
+    ],
     queries=[
         components.Query(
             query='string',
         ),
     ],
+    session=components.Session(
+        locale='zu_ZA',
+        session_id='string',
+        user_id='string',
+    ),
 )
 
 res = None
@@ -117,11 +141,23 @@ s = ionic.Ionic(
 )
 
 req = components.QueryAPIRequest(
+    messages=[
+        components.Message(
+            content='string',
+            role=components.MessageRole.SYSTEM,
+            type=components.MessageType.TAG,
+        ),
+    ],
     queries=[
         components.Query(
             query='string',
         ),
     ],
+    session=components.Session(
+        locale='zu_ZA',
+        session_id='string',
+        user_id='string',
+    ),
 )
 
 res = s.query(req, operations.QuerySecurity(
@@ -146,11 +182,23 @@ s = ionic.Ionic(
 )
 
 req = components.QueryAPIRequest(
+    messages=[
+        components.Message(
+            content='string',
+            role=components.MessageRole.SYSTEM,
+            type=components.MessageType.TAG,
+        ),
+    ],
     queries=[
         components.Query(
             query='string',
         ),
     ],
+    session=components.Session(
+        locale='zu_ZA',
+        session_id='string',
+        user_id='string',
+    ),
 )
 
 res = s.query(req, operations.QuerySecurity(
@@ -188,11 +236,11 @@ s = ionic.Ionic(client: http_client)
 
 This SDK supports the following security scheme globally:
 
-| Name            | Type            | Scheme          |
-| --------------- | --------------- | --------------- |
-| `api_key_query` | apiKey          | API key         |
+| Name             | Type             | Scheme           |
+| ---------------- | ---------------- | ---------------- |
+| `api_key_header` | apiKey           | API key          |
 
-To authenticate with the API the `api_key_query` parameter must be set when initializing the SDK client instance. For example:
+To authenticate with the API the `api_key_header` parameter must be set when initializing the SDK client instance. For example:
 
 
 ### Per-Operation Security Schemes
@@ -205,11 +253,23 @@ from ionic.models import components, operations
 s = ionic.Ionic()
 
 req = components.QueryAPIRequest(
+    messages=[
+        components.Message(
+            content='string',
+            role=components.MessageRole.SYSTEM,
+            type=components.MessageType.TAG,
+        ),
+    ],
     queries=[
         components.Query(
             query='string',
         ),
     ],
+    session=components.Session(
+        locale='zu_ZA',
+        session_id='string',
+        user_id='string',
+    ),
 )
 
 res = s.query(req, operations.QuerySecurity(

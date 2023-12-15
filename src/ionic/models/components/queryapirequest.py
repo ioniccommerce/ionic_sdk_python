@@ -2,7 +2,9 @@
 
 from __future__ import annotations
 import dataclasses
+from .message import Message
 from .query import Query
+from .session import Session
 from dataclasses_json import Undefined, dataclass_json
 from ionic import utils
 from typing import List, Optional
@@ -11,6 +13,8 @@ from typing import List, Optional
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class QueryAPIRequest:
+    messages: Optional[List[Message]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('messages'), 'exclude': lambda f: f is None }})
     queries: Optional[List[Query]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('queries'), 'exclude': lambda f: f is None }})
+    session: Optional[Session] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('session'), 'exclude': lambda f: f is None }})
     
 
