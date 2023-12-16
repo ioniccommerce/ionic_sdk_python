@@ -19,5 +19,6 @@ class Product:
     status: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status') }})
     thumbnail: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('thumbnail') }})
     brand_name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('brand_name'), 'exclude': lambda f: f is None }})
+    upc: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('upc'), 'exclude': lambda f: f is None }})
     
 

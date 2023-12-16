@@ -13,3 +13,4 @@
 | `price`                                                  | *str*                                                    | :heavy_check_mark:                                       | N/A                                                      |
 | `status`                                                 | *str*                                                    | :heavy_check_mark:                                       | N/A                                                      |
 | `thumbnail`                                              | *str*                                                    | :heavy_check_mark:                                       | N/A                                                      |
+| `upc`                                                    | *Optional[str]*                                          | :heavy_minus_sign:                                       | N/A                                                      |
