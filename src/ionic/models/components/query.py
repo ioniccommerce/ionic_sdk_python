@@ -13,6 +13,6 @@ class Query:
     query: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('query') }})
     max_price: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('max_price'), 'exclude': lambda f: f is None }})
     min_price: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('min_price'), 'exclude': lambda f: f is None }})
-    num_results: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('num_results'), 'exclude': lambda f: f is None }})
+    num_results: Optional[int] = dataclasses.field(default=5, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('num_results'), 'exclude': lambda f: f is None }})
     
 

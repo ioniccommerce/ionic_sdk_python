@@ -13,11 +13,9 @@ req = components.QueryAPIRequest(
             type=components.MessageType.TAG,
         ),
     ],
-    queries=[
-        components.Query(
-            query='string',
-        ),
-    ],
+    query=components.Query(
+        query='string',
+    ),
     session=components.Session(
         locale='zu_ZA',
         session_id='string',

@@ -12,7 +12,6 @@ from typing import List, Optional
 @dataclasses.dataclass
 class QueryAPIResponse:
     token: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('token') }})
-    human_message: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('human_message'), 'exclude': lambda f: f is None }})
     results: Optional[List[QueryResult]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('results'), 'exclude': lambda f: f is None }})
     
 
