@@ -4,7 +4,7 @@ import requests as requests_http
 from .sdkconfiguration import SDKConfiguration
 from ionic import utils
 from ionic.models import components, errors, operations
-from typing import Dict, Optional
+from typing import Callable, Dict, Optional, Union
 
 class Ionic:
     r"""Ionic Shopping API: Product Search & Recommendation API"""
@@ -12,7 +12,7 @@ class Ionic:
     sdk_configuration: SDKConfiguration
 
     def __init__(self,
-                 api_key_header: Optional[str]  = None,
+                 api_key_header: Union[Optional[str], Callable[[], Optional[str]]] = None,
                  server_idx: int = None,
                  server_url: str = None,
                  url_params: Dict[str, str] = None,
@@ -22,7 +22,7 @@ class Ionic:
         """Instantiates the SDK configuring it with the provided parameters.
         
         :param api_key_header: The api_key_header required for authentication
-        :type api_key_header: Union[str,Callable[[], str]]
+        :type api_key_header: Union[Optional[str], Callable[[], Optional[str]]]
         :param server_idx: The index of the server to use for all operations
         :type server_idx: int
         :param server_url: The server URL to use for all operations
@@ -37,7 +37,11 @@ class Ionic:
         if client is None:
             client = requests_http.Session()
         
-        security = components.Security(api_key_header = api_key_header)
+        if callable(api_key_header):
+            def security():
+                return components.Security(api_key_header = api_key_header())
+        else:
+            security = components.Security(api_key_header = api_key_header)
         
         if server_url is not None:
             if url_params is not None:

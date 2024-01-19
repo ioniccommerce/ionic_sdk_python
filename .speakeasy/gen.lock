@@ -1,0 +1,68 @@
+lockVersion: 2.0.0
+id: 2ee18988-684a-4e3b-9c3a-19484b4c2dd7
+management:
+  docChecksum: daca37373e104aa30a93c76dfbe6d308
+  docVersion: "0.1"
+  speakeasyVersion: internal
+  generationVersion: 2.237.2
+  releaseVersion: 0.6.0
+  configChecksum: 24e319b61fd7a2bf8ecf54580bfba09c
+  repoURL: https://github.com/ioniccommerce/ionic_sdk_python.git
+  repoSubDirectory: .
+  installationURL: https://github.com/ioniccommerce/ionic_sdk_python.git
+  published: true
+features:
+  python:
+    core: 4.4.2
+    globalSecurity: 2.83.2
+    globalServerURLs: 2.82.1
+    methodSecurity: 2.82.1
+    unions: 2.82.5
+generatedFiles:
+  - src/ionic/sdkconfiguration.py
+  - src/ionic/sdk.py
+  - pylintrc
+  - setup.py
+  - src/ionic/__init__.py
+  - src/ionic/utils/__init__.py
+  - src/ionic/utils/retries.py
+  - src/ionic/utils/utils.py
+  - src/ionic/models/errors/sdkerror.py
+  - tests/helpers.py
+  - src/ionic/models/operations/query.py
+  - src/ionic/models/components/queryapiresponse.py
+  - src/ionic/models/components/queryresult.py
+  - src/ionic/models/components/query.py
+  - src/ionic/models/components/product.py
+  - src/ionic/models/components/link.py
+  - src/ionic/models/components/validationerror.py
+  - src/ionic/models/components/queryapirequest.py
+  - src/ionic/models/components/session.py
+  - src/ionic/models/components/message.py
+  - src/ionic/models/components/messagetype.py
+  - src/ionic/models/components/messagerole.py
+  - src/ionic/models/components/security.py
+  - src/ionic/models/errors/httpvalidationerror.py
+  - src/ionic/models/__init__.py
+  - src/ionic/models/errors/__init__.py
+  - src/ionic/models/operations/__init__.py
+  - src/ionic/models/components/__init__.py
+  - docs/models/operations/querysecurity.md
+  - docs/models/operations/queryresponse.md
+  - docs/models/components/queryapiresponse.md
+  - docs/models/components/queryresult.md
+  - docs/models/components/query.md
+  - docs/models/components/product.md
+  - docs/models/components/link.md
+  - docs/models/components/loc.md
+  - docs/models/components/validationerror.md
+  - docs/models/components/queryapirequest.md
+  - docs/models/components/session.md
+  - docs/models/components/message.md
+  - docs/models/components/messagetype.md
+  - docs/models/components/messagerole.md
+  - docs/models/components/security.md
+  - docs/models/errors/httpvalidationerror.md
+  - docs/sdks/ionic/README.md
+  - USAGE.md
+  - .gitattributes
