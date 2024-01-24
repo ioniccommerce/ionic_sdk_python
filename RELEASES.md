@@ -163,3 +163,13 @@ Based on:
 - [python v0.7.0] .
 ### Releases
 - [PyPI v0.7.0] https://pypi.org/project/Ionic-API-SDK/0.7.0 - .
+
+## 2024-01-24 00:08:39
+### Changes
+Based on:
+- OpenAPI Doc 0.1 
+- Speakeasy CLI 1.151.0 (2.239.0) https://github.com/speakeasy-api/speakeasy
+### Generated
+- [python v0.7.0] .
+### Releases
+- [PyPI v0.7.0] https://pypi.org/project/Ionic-API-SDK/0.7.0 - .
