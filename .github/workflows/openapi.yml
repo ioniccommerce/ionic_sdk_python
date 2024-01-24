@@ -18,7 +18,7 @@ jobs:
         with:
           ref: ${{ github.head_ref }}
           token: ${{ secrets.TOKEN_GITHUB_ACTIONS }}
-      - run: curl -o openapi.json https://api.ionicapi.com/openapi.json
+      - run: curl -o openapi.json https://api.ioniccommerce.com/openapi.json
       - uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: 📓 Update OpenAPI spec
