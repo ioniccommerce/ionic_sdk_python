@@ -124,7 +124,7 @@ You can override the default server globally by passing a server index to the `s
 
 | # | Server | Variables |
 | - | ------ | --------- |
-| 0 | `https://api.ionicapi.com` | None |
+| 0 | `https://api.ioniccommerce.com` | None |
 
 #### Example
 
@@ -172,7 +172,7 @@ import ionic
 from ionic.models import components, operations
 
 s = ionic.Ionic(
-    server_url="https://api.ionicapi.com",
+    server_url="https://api.ioniccommerce.com",
 )
 
 req = components.QueryAPIRequest(
@@ -228,11 +228,11 @@ s = ionic.Ionic(client: http_client)
 
 This SDK supports the following security scheme globally:
 
-| Name            | Type            | Scheme          |
-| --------------- | --------------- | --------------- |
-| `api_key_query` | apiKey          | API key         |
+| Name             | Type             | Scheme           |
+| ---------------- | ---------------- | ---------------- |
+| `api_key_header` | apiKey           | API key          |
 
-To authenticate with the API the `api_key_query` parameter must be set when initializing the SDK client instance. For example:
+To authenticate with the API the `api_key_header` parameter must be set when initializing the SDK client instance. For example:
 
 
 ### Per-Operation Security Schemes

@@ -9,7 +9,7 @@ from ionic.models import components
 
 
 SERVERS = [
-    'https://api.ionicapi.com',
+    'https://api.ioniccommerce.com',
 ]
 """Contains the list of servers available to the SDK"""
 
@@ -21,9 +21,9 @@ class SDKConfiguration:
     server_idx: int = 0
     language: str = 'python'
     openapi_doc_version: str = '0.1'
-    sdk_version: str = '0.7.0'
-    gen_version: str = '2.239.0'
-    user_agent: str = 'speakeasy-sdk/python 0.7.0 2.239.0 0.1 Ionic-API-SDK'
+    sdk_version: str = '0.7.1'
+    gen_version: str = '2.239.1'
+    user_agent: str = 'speakeasy-sdk/python 0.7.1 2.239.1 0.1 Ionic-API-SDK'
     retry_config: RetryConfig = None
 
     def get_server_details(self) -> Tuple[str, Dict[str, str]]:

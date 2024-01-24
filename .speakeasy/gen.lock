@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 2ee18988-684a-4e3b-9c3a-19484b4c2dd7
 management:
-  docChecksum: 5cd90f5c29a75028d7402820bc074e9e
+  docChecksum: 1770f288a74391458cb648c41a6bfbf7
   docVersion: "0.1"
   speakeasyVersion: internal
-  generationVersion: 2.239.0
-  releaseVersion: 0.7.0
-  configChecksum: 2c6235d0843f1440684ec4efcb64d400
+  generationVersion: 2.239.1
+  releaseVersion: 0.7.1
+  configChecksum: 13ccc599f00f6457b4fe220134388861
   repoURL: https://github.com/ioniccommerce/ionic_sdk_python.git
   repoSubDirectory: .
   installationURL: https://github.com/ioniccommerce/ionic_sdk_python.git
