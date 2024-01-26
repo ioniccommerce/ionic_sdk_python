@@ -4,7 +4,7 @@ management:
   docChecksum: 1770f288a74391458cb648c41a6bfbf7
   docVersion: "0.1"
   speakeasyVersion: internal
-  generationVersion: 2.239.1
+  generationVersion: 2.239.4
   releaseVersion: 0.7.1
   configChecksum: 13ccc599f00f6457b4fe220134388861
   repoURL: https://github.com/ioniccommerce/ionic_sdk_python.git
