@@ -3,6 +3,7 @@ generation:
   sdkClassName: Ionic
   usageSnippets:
     optionalPropertyRendering: withExample
+  useClassNamesForArrayFields: true
   fixes:
     nameResolutionDec2023: false
   baseServerURL: ""
