@@ -7,10 +7,11 @@ generation:
   fixes:
     nameResolutionDec2023: false
     parameterOrderingFeb2024: false
+    requestResponseComponentNamesFeb2024: false
   baseServerURL: ""
   flattenGlobalSecurity: true
 python:
-  version: 0.8.0
+  version: 0.9.0
   author: Ionic
   clientServerStatusCodesAsErrors: true
   description: Python Client SDK

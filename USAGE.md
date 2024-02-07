@@ -6,6 +6,9 @@ from ionic.models import components, operations
 s = ionic.Ionic()
 
 req = components.QueryAPIRequest(
+    query=components.Query(
+        query='string',
+    ),
     messages=[
         components.Message(
             content='string',
@@ -13,9 +16,6 @@ req = components.QueryAPIRequest(
             type=components.MessageType.TAG,
         ),
     ],
-    query=components.Query(
-        query='string',
-    ),
     session=components.Session(
         locale='zu_ZA',
         session_id='string',
