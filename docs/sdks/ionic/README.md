@@ -3,15 +3,15 @@
 
 ## Overview
 
-Ionic Shopping API: Product Search & Recommendation API
+Ionic Commerce | Shopping API: Ionic  Shopping API -- Product Search & Recommendation
 
 ### Available Operations
 
-* [query](#query) - Multi-Query Product Search.
+* [query](#query) - Product Search
 
 ## query
 
-API for searching for products & recommendations. Accepts multiple query objects.
+API for searching for products & recommendations.
 
 ### Example Usage
 

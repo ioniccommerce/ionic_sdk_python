@@ -7,7 +7,7 @@ from ionic.models import components, errors, operations
 from typing import Callable, Dict, Optional, Union
 
 class Ionic:
-    r"""Ionic Shopping API: Product Search & Recommendation API"""
+    r"""Ionic Commerce | Shopping API: Ionic  Shopping API -- Product Search & Recommendation"""
 
     sdk_configuration: SDKConfiguration
 
@@ -55,8 +55,8 @@ class Ionic:
     
     
     def query(self, request: components.QueryAPIRequest, security: operations.QuerySecurity) -> operations.QueryResponse:
-        r"""Multi-Query Product Search.
-        API for searching for products & recommendations. Accepts multiple query objects.
+        r"""Product Search
+        API for searching for products & recommendations.
         """
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
         

@@ -58,7 +58,7 @@ if res.query_api_response is not None:
 
 ### [Ionic SDK](docs/sdks/ionic/README.md)
 
-* [query](docs/sdks/ionic/README.md#query) - Multi-Query Product Search.
+* [query](docs/sdks/ionic/README.md#query) - Product Search
 <!-- End Available Resources and Operations [operations] -->
 
 <!-- Start Error Handling [errors] -->
