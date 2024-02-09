@@ -5,6 +5,6 @@
 
 | Field              | Type               | Required           | Description        |
 | ------------------ | ------------------ | ------------------ | ------------------ |
-| `locale`           | *str*              | :heavy_check_mark: | N/A                |
-| `session_id`       | *str*              | :heavy_check_mark: | N/A                |
-| `user_id`          | *str*              | :heavy_check_mark: | N/A                |
+| `locale`           | *Optional[str]*    | :heavy_minus_sign: | N/A                |
+| `session_id`       | *Optional[str]*    | :heavy_minus_sign: | N/A                |
+| `user_id`          | *Optional[str]*    | :heavy_minus_sign: | N/A                |

@@ -16,11 +16,7 @@ req = components.QueryAPIRequest(
             type=components.MessageType.TAG,
         ),
     ],
-    session=components.Session(
-        locale='zu_ZA',
-        session_id='string',
-        user_id='string',
-    ),
+    session=components.Session(),
 )
 
 res = s.query(req, operations.QuerySecurity(
