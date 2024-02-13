@@ -29,14 +29,6 @@ req = components.QueryAPIRequest(
     query=components.Query(
         query='string',
     ),
-    messages=[
-        components.Message(
-            content='string',
-            role=components.MessageRole.SYSTEM,
-            type=components.MessageType.TAG,
-        ),
-    ],
-    session=components.Session(),
 )
 
 res = s.query(req, operations.QuerySecurity(
@@ -71,7 +63,7 @@ Handling errors in this SDK should largely match your expectations.  All operati
 
 ```python
 import ionic
-from ionic.models import components, operations
+from ionic.models import components, errors, operations
 
 s = ionic.Ionic()
 
@@ -79,14 +71,6 @@ req = components.QueryAPIRequest(
     query=components.Query(
         query='string',
     ),
-    messages=[
-        components.Message(
-            content='string',
-            role=components.MessageRole.SYSTEM,
-            type=components.MessageType.TAG,
-        ),
-    ],
-    session=components.Session(),
 )
 
 res = None
@@ -95,10 +79,10 @@ try:
     api_key_header="<YOUR_API_KEY_HERE>",
 ))
 except errors.HTTPValidationError as e:
-    print(e)  # handle exception
+    # handle exception
     raise(e)
 except errors.SDKError as e:
-    print(e)  # handle exception
+    # handle exception
     raise(e)
 
 if res.query_api_response is not None:
@@ -132,14 +116,6 @@ req = components.QueryAPIRequest(
     query=components.Query(
         query='string',
     ),
-    messages=[
-        components.Message(
-            content='string',
-            role=components.MessageRole.SYSTEM,
-            type=components.MessageType.TAG,
-        ),
-    ],
-    session=components.Session(),
 )
 
 res = s.query(req, operations.QuerySecurity(
@@ -167,14 +143,6 @@ req = components.QueryAPIRequest(
     query=components.Query(
         query='string',
     ),
-    messages=[
-        components.Message(
-            content='string',
-            role=components.MessageRole.SYSTEM,
-            type=components.MessageType.TAG,
-        ),
-    ],
-    session=components.Session(),
 )
 
 res = s.query(req, operations.QuerySecurity(
@@ -232,14 +200,6 @@ req = components.QueryAPIRequest(
     query=components.Query(
         query='string',
     ),
-    messages=[
-        components.Message(
-            content='string',
-            role=components.MessageRole.SYSTEM,
-            type=components.MessageType.TAG,
-        ),
-    ],
-    session=components.Session(),
 )
 
 res = s.query(req, operations.QuerySecurity(

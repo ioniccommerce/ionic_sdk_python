@@ -9,14 +9,6 @@ req = components.QueryAPIRequest(
     query=components.Query(
         query='string',
     ),
-    messages=[
-        components.Message(
-            content='string',
-            role=components.MessageRole.SYSTEM,
-            type=components.MessageType.TAG,
-        ),
-    ],
-    session=components.Session(),
 )
 
 res = s.query(req, operations.QuerySecurity(
