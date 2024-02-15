@@ -27,7 +27,7 @@ s = ionic.Ionic()
 
 req = components.QueryAPIRequest(
     query=components.Query(
-        query='string',
+        query='<value>',
     ),
 )
 
@@ -69,7 +69,7 @@ s = ionic.Ionic()
 
 req = components.QueryAPIRequest(
     query=components.Query(
-        query='string',
+        query='<value>',
     ),
 )
 
@@ -114,7 +114,7 @@ s = ionic.Ionic(
 
 req = components.QueryAPIRequest(
     query=components.Query(
-        query='string',
+        query='<value>',
     ),
 )
 
@@ -141,7 +141,7 @@ s = ionic.Ionic(
 
 req = components.QueryAPIRequest(
     query=components.Query(
-        query='string',
+        query='<value>',
     ),
 )
 
@@ -198,7 +198,7 @@ s = ionic.Ionic()
 
 req = components.QueryAPIRequest(
     query=components.Query(
-        query='string',
+        query='<value>',
     ),
 )
 

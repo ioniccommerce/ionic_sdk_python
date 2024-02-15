@@ -4,9 +4,9 @@ management:
   docChecksum: f892b4139ab45e011d42f9d2d07e997a
   docVersion: "0.1"
   speakeasyVersion: internal
-  generationVersion: 2.253.0
-  releaseVersion: 0.9.2
-  configChecksum: ede375377b038b80ae1dd700c66ea0c9
+  generationVersion: 2.258.0
+  releaseVersion: 0.9.3
+  configChecksum: f8142578d97d09f71c9ae29946c5c782
   repoURL: https://github.com/ioniccommerce/ionic_sdk_python.git
   repoSubDirectory: .
   installationURL: https://github.com/ioniccommerce/ionic_sdk_python.git
@@ -14,7 +14,7 @@ management:
 features:
   python:
     constsAndDefaults: 0.1.2
-    core: 4.4.5
+    core: 4.4.6
     globalSecurity: 2.83.2
     globalServerURLs: 2.82.1
     methodSecurity: 2.82.1
