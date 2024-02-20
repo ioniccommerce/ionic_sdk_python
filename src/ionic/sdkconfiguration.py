@@ -23,8 +23,8 @@ class SDKConfiguration:
     language: str = 'python'
     openapi_doc_version: str = '0.1'
     sdk_version: str = '0.9.3'
-    gen_version: str = '2.262.2'
-    user_agent: str = 'speakeasy-sdk/python 0.9.3 2.262.2 0.1 Ionic-API-SDK'
+    gen_version: str = '2.263.3'
+    user_agent: str = 'speakeasy-sdk/python 0.9.3 2.263.3 0.1 Ionic-API-SDK'
     retry_config: RetryConfig = None
 
     def get_server_details(self) -> Tuple[str, Dict[str, str]]:
