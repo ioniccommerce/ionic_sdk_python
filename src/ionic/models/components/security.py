@@ -7,6 +7,6 @@ from typing import Optional
 
 @dataclasses.dataclass
 class Security:
-    api_key_header: Optional[str] = dataclasses.field(default=None, metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'header', 'field_name': 'x-api-key' }})
+    api_key_query: Optional[str] = dataclasses.field(default=None, metadata={'security': { 'scheme': True, 'type': 'apiKey', 'sub_type': 'query', 'field_name': 'api_key' }})
     
 
