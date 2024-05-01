@@ -20,7 +20,7 @@ jobs:
       force: ${{ github.event.inputs.force }}
       languages: |
         - python
-      mode: direct
+      mode: pr
       openapi_docs: |
         - https://raw.githubusercontent.com/ioniccommerce/ionic_sdk_python/main/openapi.json
       publish_python: true
