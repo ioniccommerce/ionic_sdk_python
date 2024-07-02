@@ -3,6 +3,7 @@
 from __future__ import annotations
 from enum import Enum
 
+
 class MessageRole(str, Enum):
     r"""An enumeration."""
     USER = 'user'

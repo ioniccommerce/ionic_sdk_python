@@ -12,6 +12,7 @@ from typing import List, Optional
 
 @dataclasses.dataclass
 class HTTPValidationError(Exception):
+    r"""Validation Error"""
     detail: Optional[List[components_validationerror.ValidationError]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('detail'), 'exclude': lambda f: f is None }})
     
 
