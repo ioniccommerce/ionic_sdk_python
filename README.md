@@ -25,19 +25,30 @@ from ionic.models import components, operations
 
 s = ionic.Ionic()
 
-req = components.QueryAPIRequest(
-    query=components.Query(
-        query='<value>',
-    ),
-)
 
-res = s.query(req, operations.QuerySecurity(
+res = s.create_product_link(request=components.ProductLinkRequest(
+    client_details=components.ClientDetails(
+        ip='185.113.33.24',
+    ),
+    product=components.ProductDetails(
+        identifiers=components.ProductIdentifiers(),
+        link='http://negative-wording.biz',
+    ),
+    query=components.QueryDetails(
+        q='<value>',
+    ),
+    user_details=components.UserDetails(
+        email='Mitchell_DAmore49@hotmail.com',
+        id='<id>',
+    ),
+), security=operations.CreateProductLinkSecurity(
     api_key_header="<YOUR_API_KEY_HERE>",
 ))
 
-if res.query_api_response is not None:
+if res.product_link_response is not None:
     # handle response
     pass
+
 ```
 <!-- End SDK Example Usage [usage] -->
 
@@ -46,6 +57,7 @@ if res.query_api_response is not None:
 
 ### [Ionic SDK](docs/sdks/ionic/README.md)
 
+* [create_product_link](docs/sdks/ionic/README.md#create_product_link) - Ionic Commerce | Create Product Link
 * [query](docs/sdks/ionic/README.md#query) - Product Search
 <!-- End Available Resources and Operations [operations] -->
 
@@ -57,7 +69,7 @@ Handling errors in this SDK should largely match your expectations.  All operati
 | Error Object               | Status Code                | Content Type               |
 | -------------------------- | -------------------------- | -------------------------- |
 | errors.HTTPValidationError | 422                        | application/json           |
-| errors.SDKError            | 4x-5xx                     | */*                        |
+| errors.SDKError            | 4xx-5xx                    | */*                        |
 
 ### Example
 
@@ -67,17 +79,27 @@ from ionic.models import components, errors, operations
 
 s = ionic.Ionic()
 
-req = components.QueryAPIRequest(
-    query=components.Query(
-        query='<value>',
-    ),
-)
-
 res = None
 try:
-    res = s.query(req, operations.QuerySecurity(
+    res = s.create_product_link(request=components.ProductLinkRequest(
+    client_details=components.ClientDetails(
+        ip='185.113.33.24',
+    ),
+    product=components.ProductDetails(
+        identifiers=components.ProductIdentifiers(),
+        link='http://negative-wording.biz',
+    ),
+    query=components.QueryDetails(
+        q='<value>',
+    ),
+    user_details=components.UserDetails(
+        email='Mitchell_DAmore49@hotmail.com',
+        id='<id>',
+    ),
+), security=operations.CreateProductLinkSecurity(
     api_key_header="<YOUR_API_KEY_HERE>",
 ))
+
 except errors.HTTPValidationError as e:
     # handle exception
     raise(e)
@@ -85,9 +107,10 @@ except errors.SDKError as e:
     # handle exception
     raise(e)
 
-if res.query_api_response is not None:
+if res.product_link_response is not None:
     # handle response
     pass
+
 ```
 <!-- End Error Handling [errors] -->
 
@@ -112,19 +135,30 @@ s = ionic.Ionic(
     server_idx=0,
 )
 
-req = components.QueryAPIRequest(
-    query=components.Query(
-        query='<value>',
-    ),
-)
 
-res = s.query(req, operations.QuerySecurity(
+res = s.create_product_link(request=components.ProductLinkRequest(
+    client_details=components.ClientDetails(
+        ip='185.113.33.24',
+    ),
+    product=components.ProductDetails(
+        identifiers=components.ProductIdentifiers(),
+        link='http://negative-wording.biz',
+    ),
+    query=components.QueryDetails(
+        q='<value>',
+    ),
+    user_details=components.UserDetails(
+        email='Mitchell_DAmore49@hotmail.com',
+        id='<id>',
+    ),
+), security=operations.CreateProductLinkSecurity(
     api_key_header="<YOUR_API_KEY_HERE>",
 ))
 
-if res.query_api_response is not None:
+if res.product_link_response is not None:
     # handle response
     pass
+
 ```
 
 
@@ -139,19 +173,30 @@ s = ionic.Ionic(
     server_url="https://api.ioniccommerce.com",
 )
 
-req = components.QueryAPIRequest(
-    query=components.Query(
-        query='<value>',
-    ),
-)
 
-res = s.query(req, operations.QuerySecurity(
+res = s.create_product_link(request=components.ProductLinkRequest(
+    client_details=components.ClientDetails(
+        ip='185.113.33.24',
+    ),
+    product=components.ProductDetails(
+        identifiers=components.ProductIdentifiers(),
+        link='http://negative-wording.biz',
+    ),
+    query=components.QueryDetails(
+        q='<value>',
+    ),
+    user_details=components.UserDetails(
+        email='Mitchell_DAmore49@hotmail.com',
+        id='<id>',
+    ),
+), security=operations.CreateProductLinkSecurity(
     api_key_header="<YOUR_API_KEY_HERE>",
 ))
 
-if res.query_api_response is not None:
+if res.product_link_response is not None:
     # handle response
     pass
+
 ```
 <!-- End Server Selection [server] -->
 
@@ -167,7 +212,7 @@ import requests
 
 http_client = requests.Session()
 http_client.headers.update({'x-custom-header': 'someValue'})
-s = ionic.Ionic(client: http_client)
+s = ionic.Ionic(client=http_client)
 ```
 <!-- End Custom HTTP Client [http-client] -->
 
@@ -196,19 +241,30 @@ from ionic.models import components, operations
 
 s = ionic.Ionic()
 
-req = components.QueryAPIRequest(
-    query=components.Query(
-        query='<value>',
-    ),
-)
 
-res = s.query(req, operations.QuerySecurity(
+res = s.create_product_link(request=components.ProductLinkRequest(
+    client_details=components.ClientDetails(
+        ip='185.113.33.24',
+    ),
+    product=components.ProductDetails(
+        identifiers=components.ProductIdentifiers(),
+        link='http://negative-wording.biz',
+    ),
+    query=components.QueryDetails(
+        q='<value>',
+    ),
+    user_details=components.UserDetails(
+        email='Mitchell_DAmore49@hotmail.com',
+        id='<id>',
+    ),
+), security=operations.CreateProductLinkSecurity(
     api_key_header="<YOUR_API_KEY_HERE>",
 ))
 
-if res.query_api_response is not None:
+if res.product_link_response is not None:
     # handle response
     pass
+
 ```
 <!-- End Authentication [security] -->
 

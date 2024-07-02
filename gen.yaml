@@ -13,7 +13,11 @@ generation:
   baseServerURL: ""
   flattenGlobalSecurity: true
 python:
-  version: 0.9.3
+  version: 0.10.0
+  additionalDependencies:
+    dependencies: {}
+    extraDependencies:
+      dev: {}
   author: Ionic
   clientServerStatusCodesAsErrors: true
   description: Python Client SDK
@@ -28,5 +32,9 @@ python:
       webhooks: models/webhooks
   inputModelSuffix: input
   maxMethodParams: 4
+  methodArguments: require-security-and-request
   outputModelSuffix: output
   packageName: Ionic-API-SDK
+  projectUrls: {}
+  responseFormat: envelope
+  templateVersion: v1

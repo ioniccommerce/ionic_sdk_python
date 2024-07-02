@@ -1,42 +1,66 @@
 lockVersion: 2.0.0
 id: 2ee18988-684a-4e3b-9c3a-19484b4c2dd7
 management:
-  docChecksum: f892b4139ab45e011d42f9d2d07e997a
+  docChecksum: beef634374bba9f101a6f25fa9b153ba
   docVersion: "0.1"
-  speakeasyVersion: internal
-  generationVersion: 2.263.3
-  releaseVersion: 0.9.3
-  configChecksum: f8142578d97d09f71c9ae29946c5c782
+  speakeasyVersion: 1.325.0
+  generationVersion: 2.356.0
+  releaseVersion: 0.10.0
+  configChecksum: 3722a4ae249361d757771e71a94c1e20
   repoURL: https://github.com/ioniccommerce/ionic_sdk_python.git
   repoSubDirectory: .
   installationURL: https://github.com/ioniccommerce/ionic_sdk_python.git
   published: true
 features:
   python:
-    constsAndDefaults: 0.1.2
-    core: 4.4.6
-    globalSecurity: 2.83.2
-    globalServerURLs: 2.82.1
+    additionalDependencies: 0.1.0
+    constsAndDefaults: 0.1.3
+    core: 4.6.13
+    globalSecurity: 2.83.5
+    globalSecurityCallbacks: 0.1.0
+    globalSecurityFlattening: 0.1.0
+    globalServerURLs: 2.82.2
     methodSecurity: 2.82.1
-    unions: 2.82.5
+    responseFormat: 0.1.0
+    sdkHooks: 0.1.0
+    unions: 2.82.8
 generatedFiles:
   - src/ionic/sdkconfiguration.py
   - src/ionic/sdk.py
+  - py.typed
   - pylintrc
+  - scripts/publish.sh
   - setup.py
   - src/ionic/__init__.py
   - src/ionic/utils/__init__.py
   - src/ionic/utils/retries.py
   - src/ionic/utils/utils.py
   - src/ionic/models/errors/sdkerror.py
-  - tests/helpers.py
+  - src/ionic/models/operations/create_product_link.py
   - src/ionic/models/operations/query.py
+  - src/ionic/models/components/productlinkresponse.py
+  - src/ionic/models/components/enrichedproduct.py
+  - src/ionic/models/components/taggedlink.py
+  - src/ionic/models/components/validationerror.py
+  - src/ionic/models/components/productlinkrequest.py
+  - src/ionic/models/components/userdetails.py
+  - src/ionic/models/components/querydetails.py
+  - src/ionic/models/components/productdetails.py
+  - src/ionic/models/components/amountwithcurrency.py
+  - src/ionic/models/components/productidentifiers.py
+  - src/ionic/models/components/clientdetails.py
   - src/ionic/models/components/queryapiresponse.py
   - src/ionic/models/components/queryresult.py
   - src/ionic/models/components/query.py
   - src/ionic/models/components/product.py
+  - src/ionic/models/components/shippingattribute.py
   - src/ionic/models/components/link.py
-  - src/ionic/models/components/validationerror.py
+  - src/ionic/models/components/extensions.py
+  - src/ionic/models/components/extension.py
+  - src/ionic/models/components/extensionobject.py
+  - src/ionic/models/components/pricewithcurrency.py
+  - src/ionic/models/components/extensionlinks.py
+  - src/ionic/models/components/extensionimages.py
   - src/ionic/models/components/queryapirequest.py
   - src/ionic/models/components/session.py
   - src/ionic/models/components/message.py
@@ -48,15 +72,34 @@ generatedFiles:
   - src/ionic/models/errors/__init__.py
   - src/ionic/models/operations/__init__.py
   - src/ionic/models/components/__init__.py
+  - docs/models/operations/createproductlinksecurity.md
+  - docs/models/operations/createproductlinkresponse.md
   - docs/models/operations/querysecurity.md
   - docs/models/operations/queryresponse.md
+  - docs/models/components/productlinkresponse.md
+  - docs/models/components/enrichedproduct.md
+  - docs/models/components/taggedlink.md
+  - docs/models/components/loc.md
+  - docs/models/components/validationerror.md
+  - docs/models/components/productlinkrequest.md
+  - docs/models/components/userdetails.md
+  - docs/models/components/querydetails.md
+  - docs/models/components/productdetails.md
+  - docs/models/components/amountwithcurrency.md
+  - docs/models/components/productidentifiers.md
+  - docs/models/components/clientdetails.md
   - docs/models/components/queryapiresponse.md
   - docs/models/components/queryresult.md
   - docs/models/components/query.md
   - docs/models/components/product.md
+  - docs/models/components/shippingattribute.md
   - docs/models/components/link.md
-  - docs/models/components/loc.md
-  - docs/models/components/validationerror.md
+  - docs/models/components/extensions.md
+  - docs/models/components/extension.md
+  - docs/models/components/extensionobject.md
+  - docs/models/components/pricewithcurrency.md
+  - docs/models/components/extensionlinks.md
+  - docs/models/components/extensionimages.md
   - docs/models/components/queryapirequest.md
   - docs/models/components/session.md
   - docs/models/components/message.md
@@ -67,3 +110,6 @@ generatedFiles:
   - docs/sdks/ionic/README.md
   - USAGE.md
   - .gitattributes
+  - src/ionic/_hooks/sdkhooks.py
+  - src/ionic/_hooks/types.py
+  - src/ionic/_hooks/__init__.py

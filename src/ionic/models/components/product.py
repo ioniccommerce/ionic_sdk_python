@@ -2,7 +2,9 @@
 
 from __future__ import annotations
 import dataclasses
+from .extensions import Extensions
 from .link import Link
+from .shippingattribute import ShippingAttribute
 from dataclasses_json import Undefined, dataclass_json
 from ionic import utils
 from typing import List, Optional
@@ -17,8 +19,13 @@ class Product:
     name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('name') }})
     price: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('price') }})
     status: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status') }})
-    thumbnail: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('thumbnail') }})
     brand_name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('brand_name'), 'exclude': lambda f: f is None }})
+    description: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('description'), 'exclude': lambda f: f is None }})
+    extensions: Optional[Extensions] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('extensions'), 'exclude': lambda f: f is None }})
+    merchant_logo: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('merchant_logo'), 'exclude': lambda f: f is None }})
+    reference_url: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('reference_url'), 'exclude': lambda f: f is None }})
+    shipping_attributes: Optional[List[ShippingAttribute]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('shipping_attributes'), 'exclude': lambda f: f is None }})
+    thumbnail: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('thumbnail'), 'exclude': lambda f: f is None }})
     upc: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('upc'), 'exclude': lambda f: f is None }})
     
 
