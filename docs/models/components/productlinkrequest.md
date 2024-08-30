@@ -1,0 +1,14 @@
+# ProductLinkRequest
+
+
+## Fields
+
+| Field                                                                  | Type                                                                   | Required                                                               | Description                                                            |
+| ---------------------------------------------------------------------- | ---------------------------------------------------------------------- | ---------------------------------------------------------------------- | ---------------------------------------------------------------------- |
+| `client_details`                                                       | [components.ClientDetails](../../models/components/clientdetails.md)   | :heavy_check_mark:                                                     | N/A                                                                    |
+| `product`                                                              | [components.ProductDetails](../../models/components/productdetails.md) | :heavy_check_mark:                                                     | N/A                                                                    |
+| `query`                                                                | [components.QueryDetails](../../models/components/querydetails.md)     | :heavy_check_mark:                                                     | N/A                                                                    |
+| `user_details`                                                         | [components.UserDetails](../../models/components/userdetails.md)       | :heavy_check_mark:                                                     | N/A                                                                    |
+| `idempotency_key`                                                      | *Optional[str]*                                                        | :heavy_minus_sign:                                                     | N/A                                                                    |
+| `log_only`                                                             | *Optional[bool]*                                                       | :heavy_minus_sign:                                                     | N/A                                                                    |
+| `reference_id`                                                         | *Optional[str]*                                                        | :heavy_minus_sign:                                                     | N/A                                                                    |
