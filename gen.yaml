@@ -13,11 +13,18 @@ generation:
   baseServerURL: ""
   flattenGlobalSecurity: true
 python:
-  version: 0.9.3
+  version: 0.10.0
+  additionalDependencies:
+    dev: {}
+    main: {}
   author: Ionic
+  authors:
+    - Speakeasy
   clientServerStatusCodesAsErrors: true
   description: Python Client SDK
+  enumFormat: enum
   flattenGlobalSecurity: true
+  flattenRequests: false
   imports:
     option: openapi
     paths:
@@ -28,5 +35,8 @@ python:
       webhooks: models/webhooks
   inputModelSuffix: input
   maxMethodParams: 4
+  methodArguments: infer-optional-args
   outputModelSuffix: output
   packageName: Ionic-API-SDK
+  responseFormat: flat
+  templateVersion: v2
