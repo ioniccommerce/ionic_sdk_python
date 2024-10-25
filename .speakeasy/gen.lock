@@ -1,69 +1,159 @@
 lockVersion: 2.0.0
 id: 2ee18988-684a-4e3b-9c3a-19484b4c2dd7
 management:
-  docChecksum: f892b4139ab45e011d42f9d2d07e997a
+  docChecksum: beef634374bba9f101a6f25fa9b153ba
   docVersion: "0.1"
-  speakeasyVersion: internal
-  generationVersion: 2.263.3
-  releaseVersion: 0.9.3
-  configChecksum: f8142578d97d09f71c9ae29946c5c782
+  speakeasyVersion: 1.421.2
+  generationVersion: 2.438.15
+  releaseVersion: 0.10.0
+  configChecksum: 6c37ced8ef7c7e76a693029fbb77fa32
   repoURL: https://github.com/ioniccommerce/ionic_sdk_python.git
   repoSubDirectory: .
   installationURL: https://github.com/ioniccommerce/ionic_sdk_python.git
   published: true
 features:
   python:
-    constsAndDefaults: 0.1.2
-    core: 4.4.6
-    globalSecurity: 2.83.2
-    globalServerURLs: 2.82.1
-    methodSecurity: 2.82.1
-    unions: 2.82.5
+    additionalDependencies: 1.0.0
+    constsAndDefaults: 1.0.4
+    core: 5.6.0
+    defaultEnabledRetries: 0.2.0
+    enumUnions: 0.1.0
+    envVarSecurityUsage: 0.3.1
+    globalSecurity: 3.0.2
+    globalSecurityCallbacks: 1.0.0
+    globalSecurityFlattening: 1.0.0
+    globalServerURLs: 3.0.0
+    methodArguments: 1.0.2
+    methodSecurity: 3.0.0
+    responseFormat: 1.0.1
+    retries: 3.0.2
+    sdkHooks: 1.0.0
+    unions: 3.0.2
 generatedFiles:
-  - src/ionic/sdkconfiguration.py
-  - src/ionic/sdk.py
-  - pylintrc
-  - setup.py
-  - src/ionic/__init__.py
-  - src/ionic/utils/__init__.py
-  - src/ionic/utils/retries.py
-  - src/ionic/utils/utils.py
-  - src/ionic/models/errors/sdkerror.py
-  - tests/helpers.py
-  - src/ionic/models/operations/query.py
-  - src/ionic/models/components/queryapiresponse.py
-  - src/ionic/models/components/queryresult.py
-  - src/ionic/models/components/query.py
-  - src/ionic/models/components/product.py
-  - src/ionic/models/components/link.py
-  - src/ionic/models/components/validationerror.py
-  - src/ionic/models/components/queryapirequest.py
-  - src/ionic/models/components/session.py
-  - src/ionic/models/components/message.py
-  - src/ionic/models/components/messagetype.py
-  - src/ionic/models/components/messagerole.py
-  - src/ionic/models/components/security.py
-  - src/ionic/models/errors/httpvalidationerror.py
-  - src/ionic/models/__init__.py
-  - src/ionic/models/errors/__init__.py
-  - src/ionic/models/operations/__init__.py
-  - src/ionic/models/components/__init__.py
-  - docs/models/operations/querysecurity.md
-  - docs/models/operations/queryresponse.md
-  - docs/models/components/queryapiresponse.md
-  - docs/models/components/queryresult.md
-  - docs/models/components/query.md
-  - docs/models/components/product.md
+  - .gitattributes
+  - .python-version
+  - .vscode/settings.json
+  - CONTRIBUTING.md
+  - USAGE.md
+  - docs/models/components/amountwithcurrency.md
+  - docs/models/components/clientdetails.md
+  - docs/models/components/enrichedproduct.md
+  - docs/models/components/extension.md
+  - docs/models/components/extensionimages.md
+  - docs/models/components/extensionlinks.md
+  - docs/models/components/extensionobject.md
+  - docs/models/components/extensions.md
   - docs/models/components/link.md
   - docs/models/components/loc.md
-  - docs/models/components/validationerror.md
-  - docs/models/components/queryapirequest.md
-  - docs/models/components/session.md
   - docs/models/components/message.md
-  - docs/models/components/messagetype.md
   - docs/models/components/messagerole.md
+  - docs/models/components/messagetype.md
+  - docs/models/components/pricewithcurrency.md
+  - docs/models/components/product.md
+  - docs/models/components/productdetails.md
+  - docs/models/components/productidentifiers.md
+  - docs/models/components/productlinkrequest.md
+  - docs/models/components/productlinkresponse.md
+  - docs/models/components/query.md
+  - docs/models/components/queryapirequest.md
+  - docs/models/components/queryapiresponse.md
+  - docs/models/components/querydetails.md
+  - docs/models/components/queryresult.md
   - docs/models/components/security.md
+  - docs/models/components/session.md
+  - docs/models/components/shippingattribute.md
+  - docs/models/components/taggedlink.md
+  - docs/models/components/userdetails.md
+  - docs/models/components/validationerror.md
   - docs/models/errors/httpvalidationerror.md
+  - docs/models/operations/createproductlinksecurity.md
+  - docs/models/operations/querysecurity.md
+  - docs/models/utils/retryconfig.md
   - docs/sdks/ionic/README.md
-  - USAGE.md
-  - .gitattributes
+  - poetry.toml
+  - py.typed
+  - pylintrc
+  - pyproject.toml
+  - scripts/compile.sh
+  - scripts/prepare-readme.py
+  - scripts/publish.sh
+  - src/ionic_api_sdk/__init__.py
+  - src/ionic_api_sdk/_hooks/__init__.py
+  - src/ionic_api_sdk/_hooks/sdkhooks.py
+  - src/ionic_api_sdk/_hooks/types.py
+  - src/ionic_api_sdk/_version.py
+  - src/ionic_api_sdk/basesdk.py
+  - src/ionic_api_sdk/httpclient.py
+  - src/ionic_api_sdk/models/components/__init__.py
+  - src/ionic_api_sdk/models/components/amountwithcurrency.py
+  - src/ionic_api_sdk/models/components/clientdetails.py
+  - src/ionic_api_sdk/models/components/enrichedproduct.py
+  - src/ionic_api_sdk/models/components/extension.py
+  - src/ionic_api_sdk/models/components/extensionimages.py
+  - src/ionic_api_sdk/models/components/extensionlinks.py
+  - src/ionic_api_sdk/models/components/extensionobject.py
+  - src/ionic_api_sdk/models/components/extensions.py
+  - src/ionic_api_sdk/models/components/link.py
+  - src/ionic_api_sdk/models/components/message.py
+  - src/ionic_api_sdk/models/components/messagerole.py
+  - src/ionic_api_sdk/models/components/messagetype.py
+  - src/ionic_api_sdk/models/components/pricewithcurrency.py
+  - src/ionic_api_sdk/models/components/product.py
+  - src/ionic_api_sdk/models/components/productdetails.py
+  - src/ionic_api_sdk/models/components/productidentifiers.py
+  - src/ionic_api_sdk/models/components/productlinkrequest.py
+  - src/ionic_api_sdk/models/components/productlinkresponse.py
+  - src/ionic_api_sdk/models/components/query.py
+  - src/ionic_api_sdk/models/components/queryapirequest.py
+  - src/ionic_api_sdk/models/components/queryapiresponse.py
+  - src/ionic_api_sdk/models/components/querydetails.py
+  - src/ionic_api_sdk/models/components/queryresult.py
+  - src/ionic_api_sdk/models/components/security.py
+  - src/ionic_api_sdk/models/components/session.py
+  - src/ionic_api_sdk/models/components/shippingattribute.py
+  - src/ionic_api_sdk/models/components/taggedlink.py
+  - src/ionic_api_sdk/models/components/userdetails.py
+  - src/ionic_api_sdk/models/components/validationerror.py
+  - src/ionic_api_sdk/models/errors/__init__.py
+  - src/ionic_api_sdk/models/errors/httpvalidationerror.py
+  - src/ionic_api_sdk/models/errors/sdkerror.py
+  - src/ionic_api_sdk/models/operations/__init__.py
+  - src/ionic_api_sdk/models/operations/create_product_link.py
+  - src/ionic_api_sdk/models/operations/query.py
+  - src/ionic_api_sdk/py.typed
+  - src/ionic_api_sdk/sdk.py
+  - src/ionic_api_sdk/sdkconfiguration.py
+  - src/ionic_api_sdk/types/__init__.py
+  - src/ionic_api_sdk/types/basemodel.py
+  - src/ionic_api_sdk/utils/__init__.py
+  - src/ionic_api_sdk/utils/annotations.py
+  - src/ionic_api_sdk/utils/enums.py
+  - src/ionic_api_sdk/utils/eventstreaming.py
+  - src/ionic_api_sdk/utils/forms.py
+  - src/ionic_api_sdk/utils/headers.py
+  - src/ionic_api_sdk/utils/logger.py
+  - src/ionic_api_sdk/utils/metadata.py
+  - src/ionic_api_sdk/utils/queryparams.py
+  - src/ionic_api_sdk/utils/requestbodies.py
+  - src/ionic_api_sdk/utils/retries.py
+  - src/ionic_api_sdk/utils/security.py
+  - src/ionic_api_sdk/utils/serializers.py
+  - src/ionic_api_sdk/utils/url.py
+  - src/ionic_api_sdk/utils/values.py
+examples:
+  create_product_link:
+    speakeasy-default-create-product-link:
+      requestBody:
+        application/json: {"client_details": {"ip": "2aff:3f6d:613d:ecab:e464:1568:83ab:a3e3"}, "product": {"link": "https://gentle-hello.name/"}, "query": {"q": "<value>"}, "user_details": {"email": "Vivian.Waters87@gmail.com", "id": "<id>"}}
+      responses:
+        "200":
+          application/json: {"id": "<id>", "product": {"links": {"original": "https://hasty-trolley.net/", "tagged": "https://courageous-hutch.info"}}}
+        "422": {}
+  query:
+    speakeasy-default-query:
+      requestBody:
+        application/json: {"query": {"query": "<value>"}}
+      responses:
+        "200":
+          application/json: {"token": "<value>"}
+        "422": {}
