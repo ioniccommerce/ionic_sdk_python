@@ -333,3 +333,13 @@ Based on:
 - [python v0.9.3] .
 ### Releases
 - [PyPI v0.9.3] https://pypi.org/project/Ionic-API-SDK/0.9.3 - .
+
+## 2024-11-01 00:11:25
+### Changes
+Based on:
+- OpenAPI Doc 0.1 
+- Speakeasy CLI 1.423.5 (2.445.1) https://github.com/speakeasy-api/speakeasy
+### Generated
+- [python v0.10.0] .
+### Releases
+- [PyPI v0.10.0] https://pypi.org/project/Ionic-API-SDK/0.10.0 - .
