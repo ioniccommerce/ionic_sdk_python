@@ -10,14 +10,26 @@ generation:
     requestResponseComponentNamesFeb2024: false
   auth:
     oAuth2ClientCredentialsEnabled: false
+    oAuth2PasswordEnabled: false
   baseServerURL: ""
   flattenGlobalSecurity: true
 python:
-  version: 0.9.3
+  version: 0.10.0
+  additionalDependencies:
+    dev: {}
+    main: {}
   author: Ionic
+  authors:
+    - Speakeasy
   clientServerStatusCodesAsErrors: true
+  defaultErrorName: SDKError
   description: Python Client SDK
+  enumFormat: enum
+  fixFlags:
+    responseRequiredSep2024: false
   flattenGlobalSecurity: true
+  flattenRequests: false
+  flatteningOrder: parameters-first
   imports:
     option: openapi
     paths:
@@ -28,5 +40,8 @@ python:
       webhooks: models/webhooks
   inputModelSuffix: input
   maxMethodParams: 4
+  methodArguments: infer-optional-args
   outputModelSuffix: output
   packageName: Ionic-API-SDK
+  responseFormat: flat
+  templateVersion: v2
